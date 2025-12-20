@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
+    <title>Salão da Renata | Salão de Beleza</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="content">
+            <a href="#" id="logo">Salão da Renata</a>
+            <!-- PC -->
+           
+            <div class="items">
+                <a href="#about">
+                    Sobre
+                </a>
+                <a href="#menu">
+                    Serviços
+                </a>
+                <a href="#promotions">
+                    Promoções
+                </a>
+                <a href="#service">
+                    Atendimento
+                </a>
+            </div>
+            <div class="icons">
+                <a href="./view/cart.html">
+                    <span class="iconify-inline" data-icon="mdi:cart-variant"></span>
+                    <div class="cartNotify"></div>
+                </a>
+                <a href="#" class="whatsapp">
+                    <span class="iconify-inline" data-icon="akar-icons:whatsapp-fill"></span>
+                </a>
+            </div>
+            <!-- MOBILE -->
+            <div class="btnMobile">
+                <span class="iconify-inline" data-icon="mdi:scissors"></span>
+            </div>
+        </div>
+        <div class="itemsMobile">
+            <a href="#about">
+                Sobre
+            </a>
+            <a href="#menu">
+                Serviços
+            </a>
+            <a href="#promotions">
+                Promoções
+            </a>
+            <a href="#service">
+                Atendimento
+            </a>
+            <div class="icons">
+                <a href="./view/cart.html">
+                    <span class="iconify-inline" data-icon="mdi:cart-variant"></span>
+                    <div class="cartNotify"></div>
+                </a>
+                <a href="#" class="whatsapp">
+                    <span class="iconify-inline" data-icon="akar-icons:whatsapp-fill"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- BANNER -->
+    <div class="banner">
+        <div class="bannerContent">
+            <div>
+                <h1>Atendimento rápido e eficaz na palma da sua mão.</h1>
+                <p id="subtitle">Escolha como será o seu atendimento e finalize o agendamento pelo WhatsApp. Clique no
+                    botão abaixo e agende!</p>
+                <a href="#menu" class="btn">Serviços</a>
+                <div class="social">
+                    <a href="#">
+                        <span class="iconify" data-icon="brandico:facebook"></span>
+                    </a>
+                    <a href="#">
+                        <span class="iconify" data-icon="akar-icons:instagram-fill"></span>
+                    </a>
+                    <a href="#">
+                        <span class="iconify" data-icon="akar-icons:twitter-fill"></span>
+                    </a>
+                </div>
+            </div>
+            <img src="./img/FotoCapa.png" alt="Imagem da ccabelereira">
+        </div>
+    </div>
+    <!-- ITEMS -->
+    <div class="items container">
+        <div class="cardItems">
+            <span class="iconify" data-icon="ph:tote-duotone"></span>
+            <h4>Escolha os serviços</h4>
+            <p>Escolha todos os serviços que deseja clicando no botão 'Adicionar'.</p>
+        </div>
+        <div class="cardItems">
+            <span class="iconify" data-icon="ph:circle-wavy-check-duotone"></span>
+            <h4>Verifique o carrinho</h4>
+            <p>Verifique se tudo que selecionou está no carrinho.</p>
+        </div>
+        <div class="cardItems">
+            <span class="iconify" data-icon="ph:wallet-duotone"></span>
+            <h4>Envie o pedido</h4>
+            <p>Após verificar os itens, você enviará o pedido no WhatsApp do salão com um simples clique.</p>
+        </div>
+    </div>
+    <!-- ABOUT MENU ONLINE -->
+    <div id="about">
+        <div class="container about-wrapper">
+    
+  <div class="about-images">
+      <img src="img/salao1.jpg" alt="Interior do Salão da Renata">
+      <img src="img/salao1.jpg" alt="Atendimento no Salão da Renata">
+      <img src="img/salao2.png" alt="Detalhes do Salão da Renata">
+      <img src="img/salao2.png" alt="Ambiente do Salão da Renata">
+    </div>
+
+    <div class="about-text">
+      <h3>Salão da Renata</h3>
+      <p>
+        Somos um salão de beleza dedicado a realçar a beleza e a autoestima de cada cliente.
+        Nosso compromisso é oferecer atendimento de qualidade, com profissionais capacitados,
+        produtos selecionados e um ambiente acolhedor.
+      </p>
+
+      <p>
+        Acreditamos que cada pessoa é única. Por isso, trabalhamos com cuidado, atenção aos
+        detalhes e respeito ao estilo individual de quem confia em nosso trabalho.
+      </p>
+
+      <p>
+        Mais do que serviços de beleza, proporcionamos uma experiência pensada para o seu
+        bem-estar, para que você se sinta confiante e renovada a cada visita.
+      </p>
+    </div>
+
+  </div>
+    </div>
+    <!-- MENU -->
+    <div id="menu" class="container">
+        <h3>Menu</h3>
+        <div class="linksMenu">
+            <button href="#" class="linkMenu active" id="showAll">Tudo</button>
+            <button href="#" class="linkMenu" id="showServicos">Serviços</button>
+            <button href="#" class="linkMenu" id="showCremes">Cremes</button>
+            <button href="#" class="linkMenu" id="showShampoo">Shampoo e condicionador</button>
+            <button href="#" class="linkMenu" id="showKits">Kits</button>
+            <a href="#promotions" class="linkMenu">Promoções</a>
+        </div>
+        <div class="cardsMenu" id="showMenu">
+            <!-- ITEMS MENU -->
+        </div>
+    </div>
+    <!-- PROMOTIONS -->
+    <div id="promotions">
+        <div class="container">
+            <h3>Promoções</h3>
+            <div class="cardsMenu" id="showPromotions">
+                <!-- ITEMS MENU -->
+            </div>
+        </div>
+    </div>
+    <!-- SERVICE -->
+    <div id="service" class="container">
+        <h3>Atendimento</h3>
+        <div class="locAndCont">
+            <div class="cardLAC">
+                <div class="circle">
+                    <span class="iconify-inline" data-icon="akar-icons:location"></span>
+                </div>
+                <p>Rua Simão Soares, nº 0<br> Marataízes / ES</p>
+            </div>
+            <div class="cardLAC">
+                <div class="circle">
+                    <span class="iconify-inline" data-icon="akar-icons:phone"></span>
+                </div>
+                <p>
+                    Telefone de contato e WhatsApp<br>
+                    <a id="storePhoneLink" href="#">
+                        <span id="storePhone"></span>
+                    </a>
+                </p>
+            </div>
+
+        </div>
+        <div class="days">
+            <div class="cardDays">
+                <h5>Dom</h5>
+                <p>Fechado</p>
+            </div>
+            <div class="cardDays">
+                <h5>Seg</h5>
+                <p>Fechado</p>
+            </div>
+            <div class="cardDays">
+                <h5>Ter</h5>
+                <p>09h às 16h</p>
+            </div>
+            <div class="cardDays">
+                <h5>Qua</h5>
+                <p>09h às 16h</p>
+            </div>
+            <div class="cardDays">
+                <h5>Qui</h5>
+                <p>09h às 16h</p>
+            </div>
+            <div class="cardDays">
+                <h5>Sex</h5>
+                <p>09h às 16h</p>
+            </div>
+            <div class="cardDays">
+                <h5>Sáb</h5>
+                <p>09h às 16h</p>
+            </div>
+        </div>
+    </div>
+    <!-- MAPA -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59579.02544299602!2d-40.868710402125814!3d-21.045122764842883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb9372b49d0fda1%3A0x68d48f4b3397bf08!2zTWFyYXRhw616ZXMsIEVT!5e0!3m2!1spt-BR!2sbr!4v1766071847173!5m2!1spt-BR!2sbr" class="map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- FOOTER -->
+    <div class="footerBottom">
+        <div class="content">
+            <p>Salão da Renata - 2025 &copy; Todos os direitos reservados.</p>
+            <div class="social">
+                <a href="#">
+                    <span class="iconify" data-icon="brandico:facebook"></span>
+                </a>
+                <a href="#">
+                    <span class="iconify" data-icon="akar-icons:instagram-fill"></span>
+                </a>
+                <a href="#">
+                    <span class="iconify" data-icon="akar-icons:twitter-fill"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/config.js"></script>
+    <script src="./js/configLoader.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/navbar.js"></script>
+</body>
+
+</html>
