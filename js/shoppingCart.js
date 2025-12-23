@@ -152,7 +152,10 @@ const generateOrder = () => {
         noItemsInCart.showToast()
         return
     }
-
+    if (!dateInput.value || !selectedTime) {
+    alert('Por favor, selecione a data e o horário.')
+    return
+}
     const payment = document.querySelector('input[name="payment"]:checked')?.value
 
     if (!payment) {
@@ -202,7 +205,10 @@ const generateOrder = () => {
 
     orderMessage += `\n\nTotal: R$ ${total.toFixed(2).replace('.', ',')}`
     orderMessage += `\nForma de pagamento: ${paymentLabel}`
-    orderMessage += `\nPara o dia 20/12 às 07h`
+    const [year, month, day] = dateInput.value.split('-')
+    const formattedDate = `${day}/${month}`
+
+    orderMessage += `\n\nAgendamento:\n${formattedDate} às ${selectedTime}`
 
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(orderMessage)}`
     window.open(whatsappUrl, '_blank')
