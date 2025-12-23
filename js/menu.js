@@ -113,7 +113,7 @@ const renderPromotionCard = prod => {
         <div>
             <div class="cardImg">
                 <img src="./img/${prod.img}" alt="Imagem de ${prod.name}">
-                <span class="badge">Promoção</span>
+                
             </div>
             <h4>${prod.name}</h4>
             <p>${prod.description}</p>

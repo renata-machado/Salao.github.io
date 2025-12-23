@@ -13,12 +13,6 @@ const btnAddPromotionCode = document.querySelector('#addPromotionCode')
 const btnGenerateOrder = document.querySelector('#generateOrder')
 
 
-
-
-
-
-
-
 // Get
 const getCart = () => {
     const cartData = localStorage.getItem('cart');
