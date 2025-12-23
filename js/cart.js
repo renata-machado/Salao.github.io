@@ -54,7 +54,7 @@ const showingNotifications = () => {
 
 // Notifications
 const notification = Toastify({
-    text: "Produto adicionado no carrinho de compras.",
+    text: "Produto adicionado no carrinho.",
     duration: 5000,
     newWindow: true,
     close: true,

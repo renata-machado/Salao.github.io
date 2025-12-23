@@ -11,19 +11,19 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../css/cart.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <title>Salão da Renata| Carrinho de compras</title>
+    <title>Salão da Renata| Carrinho</title>
 </head>
 
 <body>
     <div class="container">
         <div class="back">
-            <a href="../../index.html">
+            <a href="../index.html">
                 <span class="iconify-inline" data-icon="ion:arrow-back-outline"></span>
                 Voltar
             </a>
         </div>
         <!-- Top -->
-        <h1>Carrinho de compras</h1>
+        <h1>Carrinho</h1>
         <p class="info">Ao clicar em ‘Gerar Pedido’ você será redirecionado automaticamente para o WhatsApp do salão
             juntamente
             com seu pedido. Por isso, verifique todos os itens da sua lista antes de continuar.</p>
@@ -65,7 +65,25 @@
                     <h3>Total</h3>
                     <span id="showTotal">Carregando...</span>
                 </div>
-                <a href="../agenda.html"><button id="agendar">Agendar</button></a>                
+                
+                <button id="openCalendar">Agendar</button>
+                <!-- Overlay -->
+                <div id="calendarOverlay" class="calendar-overlay">
+                <div class="calendar-container">
+
+                    <h2>Agendar horário</h2>
+
+                    <!-- Data -->
+                    <input type="date" id="calendarDate">
+
+                    <!-- Horários -->
+                    <div id="timeSlots" class="time-slots"></div>
+
+                    <button id="calendarNext" disabled>Próximo</button>
+                </div>
+                </div>
+
+           
                 <button id="generateOrder">Gerar Pedido</button>
                 
                 <div class="keepBuying">
@@ -82,6 +100,58 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="../js/products.js"></script>
     <script src="../js/shoppingCart.js"></script>
+    <script>
+  const openCalendar = document.getElementById('openCalendar')
+  const overlay = document.getElementById('calendarOverlay')
+  const nextBtn = document.getElementById('calendarNext')
+  const dateInput = document.getElementById('calendarDate')
+  const timeSlots = document.getElementById('timeSlots')
+
+  let selectedTime = null
+
+  openCalendar.addEventListener('click', () => {
+    overlay.classList.add('active')
+  })
+
+  dateInput.addEventListener('change', () => {
+    timeSlots.innerHTML = ''
+    selectedTime = null
+    nextBtn.disabled = true
+
+nextBtn.addEventListener('click', () => {
+  overlay.classList.remove('active')
+})
+    const hours = [
+      '08:00','09:00','10:00',
+      '11:00','13:00','14:00',
+      '15:00','16:00','17:00'
+    ]
+
+    hours.forEach(hour => {
+      const div = document.createElement('div')
+      div.className = 'time-slot'
+      div.textContent = hour
+
+      div.onclick = () => {
+        document
+          .querySelectorAll('.time-slot')
+          .forEach(t => t.classList.remove('selected'))
+
+        div.classList.add('selected')
+        selectedTime = hour
+        nextBtn.disabled = false
+      }
+
+      timeSlots.appendChild(div)
+    })
+  })
+
+  nextBtn.addEventListener('click', () => {
+    overlay.classList.remove('active')
+    console.log('Agendado:', dateInput.value, selectedTime)
+  })
+</script>
+ 
 </body>
 
 </html>
