@@ -12,7 +12,6 @@ const inputPromotionCode = document.querySelector('#promotionCode')
 const btnAddPromotionCode = document.querySelector('#addPromotionCode')
 const btnGenerateOrder = document.querySelector('#generateOrder')
 
-
 // Get
 const getCart = () => {
     const cartData = localStorage.getItem('cart');
@@ -154,6 +153,37 @@ const generateOrder = () => {
         return
     }
 
+    const payment = document.querySelector('input[name="payment"]:checked')?.value
+
+    if (!payment) {
+        Toastify({
+            text: "Selecione uma forma de pagamento.",
+            duration: 4000,
+            gravity: "bottom",
+            position: "right",
+            style: {
+                background: "#FF65C3"
+            }
+        }).showToast()
+        return
+    }
+
+    let paymentLabel = ''
+    switch (payment) {
+        case 'dinheiro':
+            paymentLabel = 'Dinheiro'
+            break
+        case 'credito':
+            paymentLabel = 'Cartão de crédito'
+            break
+        case 'debito':
+            paymentLabel = 'Cartão de débito'
+            break
+        case 'pix':
+            paymentLabel = 'Pix'
+            break
+    }
+
     let orderMessage = 'Olá! Gostaria de fazer o agendamento de:\n\n'
 
     cart.forEach(item => {
@@ -171,14 +201,13 @@ const generateOrder = () => {
     }
 
     orderMessage += `\n\nTotal: R$ ${total.toFixed(2).replace('.', ',')}`
-
-   
+    orderMessage += `\nForma de pagamento: ${paymentLabel}`
     orderMessage += `\nPara o dia 20/12 às 07h`
-   
 
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(orderMessage)}`
     window.open(whatsappUrl, '_blank')
 }
+
 
 // Notifications
 const itemRemovedNotification = Toastify({

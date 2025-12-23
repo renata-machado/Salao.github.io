@@ -456,3 +456,49 @@ hr {
   color: #fff;
   border-color: #ff65c3;
 }
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.payment-option input {
+  display: none;
+}
+
+.payment-option .dot {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #BC0B76;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-option .dot::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #BC0B76;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.2s ease;
+}
+
+.payment-option input:checked + .dot::after {
+  opacity: 1;
+}
+
+.payment-option .label {
+  font-weight: 500;
+  color: #333;
+}
